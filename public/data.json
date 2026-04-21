@@ -1,0 +1,14 @@
+[
+    {
+       "PName":"TV",
+       "Price": 10000
+    },
+     {
+       "PName":"Mobile",
+       "Price": 50000
+    },
+     {
+       "PName":"Laptop",
+       "Price": 20000
+    }
+]

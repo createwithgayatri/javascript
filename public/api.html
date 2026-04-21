@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function dataLoad() {
+            fetch("./data.json")
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    console.log(data);
+                    data.map(function (item) {
+                        var tr = document.createElement('tr');
+                        var td1 = document.createElement('td');
+                        var td2 = document.createElement('td');
+                        td1.innerHTML = item.PName;
+                        td2.innerHTML = item.Price;
+
+                        tr.appendChild(td1);
+                        tr.appendChild(td2);
+
+                        document.querySelector("table").appendChild(tr);
+                    })
+                })
+
+        }
+
+    </script>
+</head>
+
+<body onload="dataLoad()">
+    <table>
+
+    </table>
+</body>
+
+</html>

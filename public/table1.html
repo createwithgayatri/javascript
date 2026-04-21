@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var headings = ["Sr.no", "Name", "Price", "Oty"];
+        function Bodyload() {
+            var trow = document.createElement("tr")
+            headings.map(function (heading, index) {
+                var th = document.createElement("th")
+                th.innerText = heading;
+                th.value = index;
+                trow.appendChild(th)
+                document.querySelector("thead").appendChild(trow) 
+            });
+             var tr2 = document.createElement("tr");
+                var td1 = document.createElement("td");
+                var td2 = document.createElement("td");
+                var td3 = document.createElement("td");
+                var td4 = document.createElement("td");
+
+                td1.innerHTML = 1;
+                td2.innerHTML = "mobile";
+                td3.innerHTML = 32000;
+                td4.innerHTML = 3;
+                
+                tr2.appendChild(td1);
+                tr2.appendChild(td2);
+                tr2.appendChild(td3);
+                tr2.appendChild(td4);
+
+                document.querySelector("tbody").appendChild(tr2);
+        }
+
+    </script>
+</head>
+
+<body onload="Bodyload()">
+    <table border="1">
+    <thead></thead>
+    <tbody></tbody>
+    </table>
+</body>
+
+</html> 
+

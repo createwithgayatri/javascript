@@ -1,0 +1,64 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function PageLoad() {
+            var select = document.createElement("select");
+
+            var opt1 = document.createElement("option");
+            var opt2 = document.createElement("option");
+            var opt3 = document.createElement("option");
+
+            opt1.innerHTML = "HTML";
+            opt2.innerHTML = "CSS";
+            opt3.innerHTML = "JavaScript";
+
+            select.appendChild(opt1);
+            select.appendChild(opt2);
+            select.appendChild(opt3);
+
+            document.querySelector("div").appendChild(select);
+        }
+    </script>
+</head>
+
+<body onload="PageLoad()">
+    <div></div>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var Lists = ["Home", "About", "Services", "Contact"];
+        function BodyLoad() {
+            Lists.map(function (list, index){
+                var option = document.createElement("option");
+
+                option.text = list;
+                option.value = index;
+
+                document.querySelector("select").appendChild(option)
+            })
+        }
+    </script>
+</head>
+
+<body onload="BodyLoad()">
+    <select>
+    </select>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text:label {
+            color: red;
+        }
+
+        .text:checked+label {
+            color: green;
+        }
+
+        .text~button {
+            display: none;
+        }
+
+        .text:checked~button {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <dl>
+            <dt>Terms And Conditions</dt>
+            <dd>
+                <textarea rows="10" cols="50">
+                     Terms and conditions (T&Cs) are a legally binding contract between a service provider and users, setting
+                rules for usage, protecting intellectual property, and limiting liability. Also known as Terms of
+                Service (ToS) or Terms of Use, these documents allow businesses to outline acceptable behavior, handle
+                payments, and manage account terminations.
+                </textarea>
+                <br>
+                <dd><input type="checkbox" class="text"><label>Accept</label></dd>
+                <br><br>
+                 <button>Contiune</button>
+            </dd>
+           
+        </dl>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function bodyLoad() {
+            window.document.images[0].src = "./images/images.png"
+            window.document.forms[0].elements[1].value = "Gayatri";
+            window.document.forms[0].elements[0].value = "gayatri@gmail.com";
+            window.document.forms[0].elements[2].value = "Submit";
+
+           
+            window.document.forms[1].elements[0].value = "Neha";
+            window.document.forms[1].elements[1].value = "Neha@gmail.com";
+            window.document.forms[1].elements[2].value = "Login";
+
+        }
+    </script>
+</head>
+
+<body onload="bodyLoad()">
+    <img height="200" width="200" border="1">
+    <form action>
+        UserName: <input type="text">
+        <br>
+        Email: <input type="email">
+        <br>
+        <input type="button">
+    </form>
+    <br><br>
+
+    <form>
+        <h2>Login Section</h2>
+        UserName: <input type="text">
+        <br>
+        Email: <input type="email">
+        <br>
+        <input type="button">
+    </form>
+
+</body>
+
+</html>

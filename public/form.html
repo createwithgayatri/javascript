@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Username:required+span {
+            color: red;
+        }
+
+        .password:required+span {
+            color: red;
+        }
+
+        .Username:valid~div {
+            display: none;
+        }
+
+        .Username:invalid~div {
+            display: block;
+            color: red;
+        }
+
+        .password:valid~div {
+            display: none;
+        }
+
+        .password:invalid~div {
+            display: block;
+            color: red;
+        }
+        .mobile:valid~div{
+            display: none;
+        }
+        .mobile:invalid~div{
+            display: block;
+        }
+        .Age:in-range~div{
+            display: none;
+        }
+    .Age:out-of-range~div{
+        display: block;
+    }
+        
+    </style>
+</head>
+
+<body>
+    <form>
+        <dl>
+            <dt>UserName</dt>
+            <dd>
+                <input type="text" name="uname" class="Username" required><span>*</span>
+                <div>Username Requried</div>
+            </dd>
+            <dt>Mobile</dt>
+            <dd>
+                <input type="text" name="number" class="mobile" pattern="\+91\d{10}" optional>
+                <div>Enter vaild no.</div>
+            </dd>
+            <dt>Password</dt>
+            <dd>
+                <input type="password" name="password" class="password" required><span>*</span>
+                <div>Username Requried</div>
+            </dd>
+            <dt>Enter Age</dt>
+            <dd><input type="number" min="10" max="50" class="Age" >
+                <div>Not In range</div>
+            </dd>
+        </dl>
+        <button>Submit</button>
+    </form>
+</body>
+
+</html>
