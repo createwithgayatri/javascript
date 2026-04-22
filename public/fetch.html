@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var headings = ["id", "title", "price", "category", "image"];
+        function bodyLoad() {
+            fetch("./data1.json")
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (products) {
+
+                    var trow = document.createElement("tr")
+                    headings.map(function (heading, index) {
+                        var th = document.createElement("th")
+                        th.innerText = heading;
+                        th.value = index;
+                        trow.appendChild(th)
+                        document.querySelector("thead").appendChild(trow)
+                    });
+                    products.map(function (product) {
+                        console.log(products)
+                       
+                        var tr = document.createElement("tr")
+                        var td1 = document.createElement("td")
+                        var td2 = document.createElement("td")
+                        var td3 = document.createElement("td")
+                        var td4 = document.createElement("td")
+                        var td5 = document.createElement("td")
+
+                        td1.innerHTML = product.id;
+                        td2.innerHTML = product.title;
+                        td3.innerHTML = product.price;
+                        td4.innerHTML = product.category;
+                       td5.innerHTML = `<img src="${product.image}" width="100">`;
+
+                        tr.appendChild(td1)
+                        tr.appendChild(td2)
+                        tr.appendChild(td3)
+                        tr.appendChild(td4)
+                        tr.appendChild(td5)
+                        document.querySelector("tbody").appendChild(tr)
+
+                    })
+                })
+        }
+    </script>
+</head>
+
+<body onload="bodyLoad()">
+    <table border="1">
+        <thead>
+
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</body>
+
+</html>
