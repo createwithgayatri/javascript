@@ -1,0 +1,16 @@
+<script>
+const arr = [1, 2, 3, 4, 5, 1, 2]
+const seen =  new Set();
+const duplicates = new Set();
+ 
+arr.map(item => {
+
+    if (seen.has(item)){
+        duplicates.add(item);
+    }else{
+        seen.add(item);
+    }
+})
+console.log([...duplicates]);
+ 
+</script>

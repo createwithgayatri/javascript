@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script type="module">
+        import Subtext,{ Addition as Add } from "./home.js"
+        document.querySelector("h1").innerHTML = Add();
+       
+    </script>
+
 </head>
+
 <body>
-   <a href="./images/images.png" download="resume.pdf"> <button>Download</button></a>
+    <h1></h1>
+
 </body>
-</html> 
+
+</html>
