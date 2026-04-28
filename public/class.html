@@ -1,0 +1,28 @@
+<!-- <script>
+    class Demo{
+        static s = 10
+    }
+    console.log(Demo.s);
+</script> -->
+
+
+
+<script>
+    class Demo {
+        static s = 10;
+        n = 10;
+
+        constructor() {
+            Demo.s = Demo.s + 1;
+            this.n = this.n + 1;
+        }
+        Print() {
+            document.write(`s=${Demo.s} n=${this.n}</br>`)
+        }
+    }
+    let obj1 = new Demo();
+    obj1.Print();
+
+     let obj2 = new Demo();
+    obj2.Print();
+</script>
