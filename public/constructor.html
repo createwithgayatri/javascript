@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        class Database {
+            constructor() {
+                console.log("Database Connected");
+            }
+
+            insert() {
+                document.querySelector("p").innerHTML = "Data Inserted";
+            }
+
+            update() {
+                document.querySelector("p").innerHTML = "Data Updated";
+            }
+        }
+
+        function insertClick() {
+            let obj = new Database();
+            obj.insert();
+        }
+
+        function updateClick() {
+            let obj = new Database();
+            obj.update();
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="insertClick()">Insert</button>
+    <button onclick="updateClick()">Update</button>
+    <p></p>
+</body>
+</html>

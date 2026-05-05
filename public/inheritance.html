@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Windows_OS_Version_7{
+            brightness = "Auto Brightness Feature";
+            Print(){
+                document.write(`${this.brightness}<br>`);
+            }
+        }
+        class Windows_OS_Version_10{
+            screen = "screen saver";
+            Print(){
+                let obj = new Windows_OS_Version_7();
+                obj.Print();
+                document.write(`${this.screen}<br>`);
+            }
+        }
+        class Windows_OS_Version_11{
+            gallery = "Modifed gallery";
+            Print(){
+                let obj = new Windows_OS_Version_10();
+                obj.Print();
+                document.write(`${this.gallery}<br>`);
+            }
+        }
+        function InstallClick(){
+            var version = document.querySelector("select").value;
+            switch(version){
+                case "ver7":
+                    document.write(`<h2>Windows Version-7 Installed`);
+                    let obj1 = new Windows_OS_Version_7();
+                    obj1.Print();
+                    break;
+                case "ver10":
+                    document.write(`<h2>Windows Version-10 Installed`);
+                    let obj2 = new Windows_OS_Version_10();
+                    obj2.Print();
+                    break;
+                case "ver11":
+                    document.write(`<h2>Windows Version-11 Installed`);
+                    let obj3 = new Windows_OS_Version_11();
+                    obj3.Print();
+                    break;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>Install Windows</h3>
+    <select>
+        <option value="ver7">Windows Version-7</option>
+        <option value="ver10">Windows Version-10</option>
+        <option value="ver11">Windows Version-11</option>
+    </select>
+    <button onclick="InstallClick()">Install</button>
+</body>
+</html>
